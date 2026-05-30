@@ -59,7 +59,7 @@ For the library:
 npm install entropass
 ```
 
-Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node 18+, Deno and Bun.
+Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node 20+, Deno and Bun.
 
 ## Usage
 
