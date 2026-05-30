@@ -1,0 +1,63 @@
+{
+  "name": "entropass",
+  "version": "0.1.0",
+  "description": "Generate strong, bias-free passwords (random, pronounceable, PIN) and measure password strength — entropy & crack time — entirely locally. Crypto-secure, zero dependencies, no network.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "password",
+    "password-generator",
+    "passphrase",
+    "password-strength",
+    "entropy",
+    "crack-time",
+    "csprng",
+    "secure-random",
+    "crypto",
+    "pin",
+    "security",
+    "zero-dependency"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/entropass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/entropass/issues"
+  },
+  "homepage": "https://didrod205.github.io/entropass/",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.8"
+  }
+}

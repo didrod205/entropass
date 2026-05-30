@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>entropass — secure password generator & strength meter, 100% local</title>
+    <meta
+      name="description"
+      content="Generate strong, bias-free passwords (random, pronounceable, PIN) and check password strength with real entropy and crack-time estimates — entirely in your browser. Nothing is sent anywhere."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>🔐 entropass</h1>
+      <p class="tagline">
+        Strong, <strong>bias-free</strong> passwords with real
+        <strong>entropy &amp; crack-time</strong> — generated in your browser.
+      </p>
+      <p class="privacy">🔒 100% local — nothing is ever sent over the network.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="output">
+          <code id="pw" class="pw"></code>
+          <div class="output-actions">
+            <button id="regen" title="Regenerate" type="button">🔄</button>
+            <button id="copy" title="Copy" type="button">Copy</button>
+          </div>
+        </div>
+
+        <div class="meter">
+          <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+          <div class="meter-info">
+            <span id="label" class="label"></span>
+            <span id="info" class="info"></span>
+          </div>
+        </div>
+
+        <div class="tabs" id="tabs">
+          <button data-mode="random" class="active" type="button">Random</button>
+          <button data-mode="pronounceable" type="button">Pronounceable</button>
+          <button data-mode="pin" type="button">PIN</button>
+        </div>
+
+        <div class="controls" id="controls"></div>
+      </section>
+
+      <section class="card">
+        <h3>Check your own password</h3>
+        <input id="check" type="text" placeholder="Type a password to test its strength…" autocomplete="off" />
+        <div class="meter">
+          <div class="bar"><div id="checkFill" class="bar-fill"></div></div>
+          <div class="meter-info">
+            <span id="checkLabel" class="label"></span>
+            <span id="checkInfo" class="info"></span>
+          </div>
+        </div>
+        <p class="note">Typed here, evaluated here — it never leaves the page.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://github.com/didrod205/entropass">GitHub</a> ·
+      <a href="https://www.npmjs.com/package/entropass">npm</a> ·
+      <span>MIT</span> · <span>Zero dependencies</span>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
