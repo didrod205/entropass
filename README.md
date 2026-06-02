@@ -53,13 +53,32 @@ daily, and anyone who wants a trustworthy, **offline** generator.
 
 **No install —** just open the **[web app](https://didrod205.github.io/entropass/)**.
 
-For the library:
+**Command line:**
+
+```bash
+npx entropass -l 24 --symbols          # a strong 24-char password
+npx entropass --pronounceable          # easier to type/remember
+npx entropass strength "hunter2"       # rate an existing password
+```
+
+**Library:**
 
 ```bash
 npm install entropass
 ```
 
 Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node 20+, Deno and Bun.
+
+## CLI
+
+```bash
+entropass [options]            # generate (default: a strong 16-char password)
+entropass strength <password>  # rate it (label + crack-time)
+```
+
+Options: `-l/--length`, `-n/--count`, `--symbols`, `--no-digits/uppercase/lowercase`,
+`--no-ambiguous`, `--pronounceable`, `--pin`, `--bits`. Uses a cryptographic RNG;
+nothing is transmitted.
 
 ## Usage
 

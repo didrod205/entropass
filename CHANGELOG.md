@@ -6,6 +6,12 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0]
+
+### Added
+
+- **Command-line interface** (`entropass` bin), zero-dependency: generate passwords (length, count, symbols, exclusions, `--pronounceable`, `--pin`, `--bits`) and `strength <password>` to rate one (label + crack-time). Uses a cryptographic RNG; nothing is transmitted.
+
 ## [0.1.0]
 
 ### Added
@@ -21,5 +27,6 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Free, local-only web app (generator + strength meter) deployed to GitHub Pages.
 - Zero runtime dependencies; ESM + CJS + TypeScript types.
 
-[Unreleased]: https://github.com/didrod205/entropass/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/didrod205/entropass/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/didrod205/entropass/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/didrod205/entropass/releases/tag/v0.1.0
